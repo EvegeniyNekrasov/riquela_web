@@ -17,11 +17,11 @@ video {
 .overlay-desc {
   background: transparent;
   position: absolute;
-  top: 0;
+  top: 40%;
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
+  display: row;
   align-items: center;
   justify-content: center;
 }
@@ -30,6 +30,13 @@ h1 {
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 6vw;
+  text-align: center;
+}
+
+.header-text {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 3vw;
   text-align: center;
 }
 
@@ -134,4 +141,134 @@ nav {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ABOUT */
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 2;
+}
+.intro-text h2 {
+  font-size: 44px;
+  background: linear-gradient(to right, #e2940d, #c65e12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Raleway", sans-serif;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #302f2e;
+  font-family: "Raleway", sans-serif;
+}
+
+.cover {
+  flex: 1;
+}
+
+.cover img {
+  height: 40vh;
+  margin: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .intro-text h1 {
+    font-size: 24px;
+  }
+  .intro-text p {
+    font-size: 14px;
+  }
+  .cover img {
+    height: 30vh;
+  }
+}
+
+.mapa h2 {
+  padding: 5vh;
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #e2940d, #c65e12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Raleway", sans-serif;
+}
+
+/* CONTACT FORM */
+.contact-section {
+  background-color: #242122;
+  padding: 40px 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  background: linear-gradient(to right, #e2940d, #c65e12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Raleway", sans-serif;
+}
+
+.border {
+  width: 100px;
+  height: 10px;
+  background: tomato;
+  margin: 40px auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  padding: 20px 40px;
+  border: 0;
+  background: #111;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.contact-form-text:focus {
+  box-shadow: 0 0 10px 4px #db6f14;
+}
+
+textarea.contact-form-text {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form-btn {
+  float: right;
+  border: 0;
+  background: #db6f14;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+  background: #c54b09;
 }
