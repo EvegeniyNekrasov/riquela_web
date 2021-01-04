@@ -52,7 +52,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 
 .nav-links li {
@@ -75,6 +75,7 @@ nav {
   height: 3px;
   background-color: rgb(197, 197, 197);
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1024px) {
@@ -91,13 +92,14 @@ nav {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
+    top: 35vh;
     background-color: #242122;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     transform: translateX(100%); /* sale de la pantalla */
+    transition: transform 0.5s ease-in;
   }
   .nav-links li {
     opacity: 0;
@@ -105,4 +107,31 @@ nav {
   .burger {
     display: block;
   }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
